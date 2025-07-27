@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Box Model Lab</title>
+  <style>
+    /* ===== Base Styles (not part of the requirements, just for readability) ===== */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    /* ===== Box‑Model Demonstration ===== */
+    .box {
+      /* Required properties */
+      border: 5px solid royalblue; /* solid 5 px blue border */
+      padding: 20px;              /* 20 px padding */
+      margin: 20px auto;          /* 20 px margin (and center horizontally) */
+      box-sizing: border-box;     /* Switch to border-box model */
+      background: #e0e0e0;        /* light‑gray background */
+
+      /* Optional fixed dimensions so the effect is obvious */
+      width: 300px;
+      height: 150px;
+    }
+
+    /* Second box uses the default content-box model for comparison */
+    .box.content-box-demo {
+      box-sizing: content-box;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Box Model Lab</h1>
+
+  <!-- First demo box (border‑box) -->
+  <div class="box">
+    <p>This is a demonstration of the CSS Box Model with <code>box-sizing: border-box</code>.</p>
+  </div>
+
+  <!-- Second demo box (content‑box) -->
+  <div class="box content-box-demo">
+    <p>This box uses <code>box-sizing: content-box</code> so you can compare the size difference.</p>
+  </div>
+</body>
+</html>
